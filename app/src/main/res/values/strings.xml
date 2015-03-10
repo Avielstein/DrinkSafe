@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DrinkSafe</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    //Main page strings
+    <string name="welcome_Text">Welcome to DrinkSafe.</string>
+    <string name="welcome_Text2">Please enter information below as accurately as possible</string>
+    <string name="more_Info">More Info</string>
+
+</resources>
