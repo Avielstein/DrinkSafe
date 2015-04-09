@@ -1,25 +1,193 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:id="@+id/MainActivity"
+    android:background="#b7b5b3">
 
-    //this is the welcome and info request
-    <TextView
-        android:id="@+id/welcome_Text"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:padding="24dp" />
-    <TextView
-        android:id="@+id/welcome_Text2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:padding="24dp" />
+        android:layout_gravity="top|center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/welcome_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:padding="15dp"
+            android:text="Welcom to DrinkSafe!"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:textSize="25dp"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/welcome_Text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="For more information about how your Blood Alcohol Concentration (B.A.C.) is calculated, please see \'More Info\' in the top right"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/welcome_Text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|left"
+            android:text="Please enter information below as accurately as possible."
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp"
+            android:textColor="#000"
+            android:textSize="20dp" />
+
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/more_Info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:paddingRight="15dp"
+        android:paddingTop="13dp"
         android:text="@string/more_Info" />
+
+
+    <Button
+        android:id="@+id/get_Started"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:text="@string/get_Started" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|left"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age:"
+                android:id="@+id/age_Text"
+                android:layout_gravity="left|center_vertical"
+                android:paddingLeft="15dp"
+                android:textColor="#000"
+                android:textSize="30dp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/age_spinner"
+                android:layout_gravity="left|center_vertical"
+                android:entries="@array/ageArray" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight (round to nearest 10):"
+                android:id="@+id/weight_Text"
+                android:layout_gravity="left|center_vertical"
+                android:paddingLeft="15dp"
+                android:textColor="#000"
+                android:textSize="30dp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/weight_spinner"
+                android:layout_gravity="left|center_vertical"
+                android:entries="@array/weightArray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height: "
+                android:id="@+id/heightArray"
+                android:layout_gravity="left|center_vertical"
+                android:paddingLeft="15dp"
+                android:textColor="#000"
+                android:textSize="30dp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/height_spinner"
+                android:layout_gravity="left|center_vertical"
+                android:entries="@array/heightArray" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sex:"
+                android:id="@+id/sex_Text"
+                android:layout_gravity="left|center_vertical"
+                android:paddingLeft="15dp"
+                android:textColor="#000"
+                android:textSize="30dp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sex_spinner"
+                android:layout_gravity="left|center_vertical"
+                android:entries="@array/sexArray" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 
 </FrameLayout>

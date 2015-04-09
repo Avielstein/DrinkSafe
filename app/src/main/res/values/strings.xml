@@ -4,10 +4,192 @@
     <string name="app_name">DrinkSafe</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    
+
+
     //Main page strings
     <string name="welcome_Text">Welcome to DrinkSafe.</string>
-    <string name="welcome_Text2">Please enter information below as accurately as possible</string>
+    <string name="welcome_Text3">Please enter information below as accurately as possible</string>
+    <string name="welcome_Text2">For more information about how your Blood Alcohol Concentration (B.A.C.) is calculated, please see \'More Info\' in the top right</string>
     <string name="more_Info">More Info</string>
+    <string name="get_Started">Get Started</string>
+    <string name="age_Text">Age:</string>
+    
+    <string name="ageValue"></string>
+    <string name="weightValue"></string>
+    <string name="heightValue"></string>
+    <string name="sexValue"></string>
+
+
+
+    <string-array name="ageArray">
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+        <item>60</item>
+        <item>61</item>
+        <item>62</item>
+        <item>63</item>
+        <item>64</item>
+        <item>65</item>
+        <item>66</item>
+        <item>67</item>
+        <item>68</item>
+        <item>69</item>
+        <item>70</item>
+        <item>71</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>70</item>
+        <item>71</item>
+        <item>72</item>
+        <item>73</item>
+        <item>74</item>
+        <item>75</item>
+        <item>76</item>
+        <item>77</item>
+        <item>78</item>
+        <item>79</item>
+        <item>80</item>
+        <item>81</item>
+        <item>82</item>
+        <item>83</item>
+        <item>84</item>
+        <item>85</item>
+        <item>86</item>
+        <item>87</item>
+        <item>88</item>
+        <item>89</item>
+        <item>90</item>
+    </string-array>
+
+    <string name="weight_Text">Weight (Round to the nearest 10):</string>
+
+    <string-array name="weightArray">
+        <item>90</item>
+        <item>100</item>
+        <item>110</item>
+        <item>120</item>
+        <item>130</item>
+        <item>140</item>
+        <item>150</item>
+        <item>160</item>
+        <item>170</item>
+        <item>180</item>
+        <item>190</item>
+        <item>200</item>
+        <item>210</item>
+        <item>220</item>
+        <item>230</item>
+        <item>240</item>
+        <item>250</item>
+        <item>260</item>
+        <item>270</item>
+        <item>280</item>
+        <item>290</item>
+        <item>300</item>
+    </string-array>
+
+    <string name="height_Text">Height(inches):</string>
+
+    <array name="heightArray">
+        <item>4\'6\"</item>
+        <item>4\'7\"</item>
+        <item>4\'8\"</item>
+        <item>4\'9\"</item>
+        <item>4\'10\"</item>
+        <item>4\'11\"</item>
+        <item>5\'0\"</item>
+        <item>5\'1\"</item>
+        <item>5\'2\"</item>
+        <item>5\'3\"</item>
+        <item>5\'4\"</item>
+        <item>5\'5\"</item>
+        <item>5\'6\"</item>
+        <item>5\'7\"</item>
+        <item>5\'8\"</item>
+        <item>5\'9\"</item>
+        <item>5\'10\"</item>
+        <item>5\'11\"</item>
+        <item>6\'0\"</item>
+        <item>6\'1\"</item>
+        <item>6\'2\"</item>
+        <item>6\'3\"</item>
+        <item>6\'4\"</item>
+        <item>6\'5\"</item>
+        <item>6\'6\"</item>
+        <item>6\'7\"</item>
+        <item>6\'8\"</item>
+    </array>
+
+    <string name="sex_Text">Sex:</string>
+
+    <array name="sexArray">
+        <item>Female</item>
+        <item>Male</item>
+    </array>
+
+    //more info page
+    <string name="title_activity_information">InformationActivity</string>
+    <string name="info_Text1"></string>
+    <string name="info_Text2"></string>
+    <string name="info_Text3"></string>
+    <string name="info_Text4"></string>
+    <string name="info_Text5"></string>
+    <string name="info_Text6"></string>
+    <string name="info_Text7"></string>
+    <string name="info_Text8"></string>
+    <string name="title_activity_drink">DrinkActivity</string>
+
+
+    //Drink Page
+    <string name="drink">Drink!</string>
+    <string name="currentBAC">Your current B.A.C.</string>
+    <string name="timeLeft">Time until completely Sober: </string>
+    <string name="title_activity_information_activity2">InformationActivity2</string>
+
+    <string name="bac">0.000</string>
+    <string name="time">0:00</string>
 
 </resources>

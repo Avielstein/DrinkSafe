@@ -1,17 +1,133 @@
 package com.example.avistein.drinksafe;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
+
 
 
 public class MainActivity extends ActionBarActivity {
+
+
+    Button mmore_InfoButton;
+    Button mget_StartedButton;
+
+
+    TextView mwelcome_Text;
+    TextView mwelcome_Text2;
+    TextView mwelcome_Text3;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        //this gets the information from the spinners
+        Spinner ageSpinner=(Spinner) findViewById(R.id.age_spinner);
+        ageSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                // your code here
+                Log.d("MyAgeSpinner", parentView.getItemAtPosition(position).toString());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+
+        });
+
+        Spinner weightSpinner=(Spinner) findViewById(R.id.weight_spinner);
+        weightSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                // your code here
+                Log.d("MyWeightSpinner", parentView.getItemAtPosition(position).toString());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+
+        });
+
+        Spinner heightSpinner=(Spinner) findViewById(R.id.height_spinner);
+        heightSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                // your code here
+                Log.d("MyHeightSpinner", parentView.getItemAtPosition(position).toString());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+
+        });
+
+        Spinner sexSpinner=(Spinner) findViewById(R.id.sex_spinner);
+        sexSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                // your code here
+                Log.d("MySexSpinner", parentView.getItemAtPosition(position).toString());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+            }
+
+        });
+
+
+
+
+        mwelcome_Text = (TextView) findViewById(R.id.welcome_Text);
+        mwelcome_Text2 = (TextView) findViewById(R.id.welcome_Text2);
+        mwelcome_Text3 = (TextView) findViewById(R.id.welcome_Text3);
+
+
+        mmore_InfoButton = (Button) findViewById(R.id.more_Info);
+        mmore_InfoButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+            //start MoreInfo
+                Intent i = new Intent(MainActivity.this, InformationActivity.class);
+                startActivityForResult(i, 0);
+            }
+        });
+
+
+        mget_StartedButton = (Button) findViewById(R.id.get_Started);
+        mget_StartedButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                //start MoreInfo
+                //push spinner info as instance variable
+                Intent i = new Intent(MainActivity.this, DrinkActivity.class);
+                startActivityForResult(i, 0);
+            }
+        });
+
+
+
     }
 
 
