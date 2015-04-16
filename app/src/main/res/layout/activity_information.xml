@@ -56,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|left"
-                android:text="Blood Alcohol Content (B.A.C.) is what is used to determine how inebriated someone is. A comfortable buzz is usually measured between  --- and --- B.A.C. Higher levels of intoxication can result in harmful effects."
+                android:text="This App aims to be a guild to healthy enjoyment of alcohol and facilitate awareness of one’s own level of drunkenness. Have Fun!"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:paddingTop="15dp"
@@ -68,12 +68,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|left"
-                android:text="This App aims to be a guild to healthy enjoyment of alcohol and facilitate awareness of one’s own level of drunkenness. Have Fun!"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:paddingTop="15dp"
                 android:textColor="#000"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:text="add stuff here" />
 
             <TextView
                 android:id="@+id/info_Text6"

@@ -3,13 +3,10 @@ package com.example.avistein.drinksafe;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.jjoe64.graphview.GraphView;
@@ -26,10 +23,12 @@ public class DrinkActivity extends ActionBarActivity {
     TextView mbac;
     TextView mtime;
     public int drink;
-    //public int bac;
-    //public int goingDown;
     public int tag;
     public int timeKeper;
+    int age;
+    int weight;
+    int height;
+    int sex;
 
 
 
@@ -41,11 +40,23 @@ public class DrinkActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drink);
 
+        //Gets the spinner info
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            age = extras.getInt("MyAgeSpinner");
+            weight = extras.getInt("MyWeightSpinner");
+            height = extras.getInt("MyHeightSpinner");
+            sex = extras.getInt("MySexSpinner");
+        }
 
 
-
-
-
+        //this test the information coming in
+        /*
+        //display in short period of time
+        Toast toast = Toast.makeText(getApplicationContext(), String.valueOf(sex),
+                Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.CENTER|Gravity.CENTER, 0, 0);
+        toast.show();*/
 
 
         mcurrentBAC = (TextView) findViewById(R.id.currentBAC);
@@ -114,6 +125,8 @@ public class DrinkActivity extends ActionBarActivity {
             if (timeKeper>10 & drink >0){
                 timeKeper = 0;
                 drink = drink - 1;
+
+                //same as what is in the else  ~V~V~
                 double x = i;
                 double y = drink;
                 DataPoint v = new DataPoint(x, y);

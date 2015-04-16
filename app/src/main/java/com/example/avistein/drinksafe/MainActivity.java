@@ -26,6 +26,11 @@ public class MainActivity extends ActionBarActivity {
     TextView mwelcome_Text3;
 
 
+    int age;
+    int weight;
+    int height;
+    int sex;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,7 @@ public class MainActivity extends ActionBarActivity {
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 // your code here
                 Log.d("MyAgeSpinner", parentView.getItemAtPosition(position).toString());
+                age = Integer.valueOf((String)parentView.getItemAtPosition(position));
             }
 
             @Override
@@ -55,6 +61,7 @@ public class MainActivity extends ActionBarActivity {
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 // your code here
                 Log.d("MyWeightSpinner", parentView.getItemAtPosition(position).toString());
+                weight = Integer.valueOf((String)parentView.getItemAtPosition(position));
             }
 
             @Override
@@ -63,6 +70,7 @@ public class MainActivity extends ActionBarActivity {
             }
 
         });
+
 
         Spinner heightSpinner=(Spinner) findViewById(R.id.height_spinner);
         heightSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -70,7 +78,10 @@ public class MainActivity extends ActionBarActivity {
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 // your code here
                 Log.d("MyHeightSpinner", parentView.getItemAtPosition(position).toString());
+                height = position + 54;
             }
+
+
 
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
@@ -79,12 +90,14 @@ public class MainActivity extends ActionBarActivity {
 
         });
 
+        //what is going on here???
         Spinner sexSpinner=(Spinner) findViewById(R.id.sex_spinner);
         sexSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 // your code here
                 Log.d("MySexSpinner", parentView.getItemAtPosition(position).toString());
+                sex = position;
             }
 
             @Override
@@ -121,7 +134,12 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 //start MoreInfo
                 //push spinner info as instance variable
+                //I dont think this is
                 Intent i = new Intent(MainActivity.this, DrinkActivity.class);
+                i.putExtra("MyAgeSpinner",age); //this pushes the info?
+                i.putExtra("MyWeightSpinner",weight); //this pushes the info?
+                i.putExtra("MyHeightSpinner",height); //this pushes the info?
+                i.putExtra("MySexSpinner", sex); //this pushes the info?
                 startActivityForResult(i, 0);
             }
         });
