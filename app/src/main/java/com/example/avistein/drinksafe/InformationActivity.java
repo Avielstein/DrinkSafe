@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -17,6 +19,7 @@ public class InformationActivity extends ActionBarActivity {
     TextView minfo_Text6;
     TextView minfo_Text7;
     TextView minfo_Text8;
+    Button mbackButton;
 
 
 
@@ -33,6 +36,17 @@ public class InformationActivity extends ActionBarActivity {
         minfo_Text6 = (TextView) findViewById(R.id.info_Text6);
         minfo_Text7 = (TextView) findViewById(R.id.info_Text7);
         minfo_Text8 = (TextView) findViewById(R.id.info_Text8);
+
+        mbackButton = (Button) findViewById(R.id.MainActivity);
+        mbackButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                //start MoreInfo
+                finish();
+            }
+        });
+
     }
 
 

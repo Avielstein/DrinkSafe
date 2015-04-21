@@ -20,6 +20,8 @@
     <string name="sexValue"></string>
 
 
+    <string name="Back">Back</string>
+
 
     <string-array name="ageArray">
         <item>21</item>
